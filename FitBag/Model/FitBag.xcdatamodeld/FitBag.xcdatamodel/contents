@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Airlines" representedClassName="Airlines" syncable="YES">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="logoImg" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="idMeasureCmAirline" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeasureCm" inverseName="idAirlines" inverseEntity="MeasureCm" syncable="YES"/>
+        <relationship name="isMeasureInAirline" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeasureIn" inverseName="idAirlines" inverseEntity="MeasureIn" syncable="YES"/>
+    </entity>
+    <entity name="MeasureCm" representedClassName="MeasureCm" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="idAirlines" maxCount="1" deletionRule="Nullify" destinationEntity="Airlines" inverseName="idMeasureCmAirline" inverseEntity="Airlines" syncable="YES"/>
+        <relationship name="idTypeBaggage" maxCount="1" deletionRule="Nullify" destinationEntity="TypeBaggage" inverseName="idMeasureCmBag" inverseEntity="TypeBaggage" syncable="YES"/>
+    </entity>
+    <entity name="MeasureIn" representedClassName="MeasureIn" syncable="YES">
+        <attribute name="height" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="length" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="idAirlines" maxCount="1" deletionRule="Nullify" destinationEntity="Airlines" inverseName="isMeasureInAirline" inverseEntity="Airlines" syncable="YES"/>
+        <relationship name="idTypeBaggage" maxCount="1" deletionRule="Nullify" destinationEntity="TypeBaggage" inverseName="idMeasureInBag" inverseEntity="TypeBaggage" syncable="YES"/>
+    </entity>
+    <entity name="TypeBaggage" representedClassName="TypeBaggage" syncable="YES">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="idMeasureCmBag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeasureCm" inverseName="idTypeBaggage" inverseEntity="MeasureCm" syncable="YES"/>
+        <relationship name="idMeasureInBag" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeasureIn" inverseName="idTypeBaggage" inverseEntity="MeasureIn" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Airlines" positionX="-54" positionY="9" width="128" height="135"/>
+        <element name="MeasureCm" positionX="-36" positionY="45" width="128" height="135"/>
+        <element name="MeasureIn" positionX="-18" positionY="90" width="128" height="135"/>
+        <element name="TypeBaggage" positionX="-63" positionY="-18" width="128" height="105"/>
+    </elements>
+</model>
