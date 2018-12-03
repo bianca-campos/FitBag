@@ -2,7 +2,7 @@
 //  MeasureCm+CoreDataProperties.swift
 //  FitBag
 //
-//  Created by Bianca Campos on 2018-11-09.
+//  Created by Bianca Campos on 2018-11-26.
 //  Copyright © 2018 Bianca Campos. All rights reserved.
 //
 //

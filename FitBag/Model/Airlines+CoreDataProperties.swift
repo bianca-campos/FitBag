@@ -2,7 +2,7 @@
 //  Airlines+CoreDataProperties.swift
 //  FitBag
 //
-//  Created by Bianca Campos on 2018-11-09.
+//  Created by Bianca Campos on 2018-11-27.
 //  Copyright © 2018 Bianca Campos. All rights reserved.
 //
 //
@@ -21,25 +21,8 @@ extension Airlines {
     @NSManaged public var logoImg: String?
     @NSManaged public var name: String?
     @NSManaged public var website: String?
-    @NSManaged public var idMeasureCmAirline: NSSet?
     @NSManaged public var isMeasureInAirline: NSSet?
-
-}
-
-// MARK: Generated accessors for idMeasureCmAirline
-extension Airlines {
-
-    @objc(addIdMeasureCmAirlineObject:)
-    @NSManaged public func addToIdMeasureCmAirline(_ value: MeasureCm)
-
-    @objc(removeIdMeasureCmAirlineObject:)
-    @NSManaged public func removeFromIdMeasureCmAirline(_ value: MeasureCm)
-
-    @objc(addIdMeasureCmAirline:)
-    @NSManaged public func addToIdMeasureCmAirline(_ values: NSSet)
-
-    @objc(removeIdMeasureCmAirline:)
-    @NSManaged public func removeFromIdMeasureCmAirline(_ values: NSSet)
+    @NSManaged public var idMeasureCmAirline: NSSet?
 
 }
 
@@ -57,5 +40,22 @@ extension Airlines {
 
     @objc(removeIsMeasureInAirline:)
     @NSManaged public func removeFromIsMeasureInAirline(_ values: NSSet)
+
+}
+
+// MARK: Generated accessors for idMeasureCmAirline
+extension Airlines {
+
+    @objc(addIdMeasureCmAirlineObject:)
+    @NSManaged public func addToIdMeasureCmAirline(_ value: MeasureCm)
+
+    @objc(removeIdMeasureCmAirlineObject:)
+    @NSManaged public func removeFromIdMeasureCmAirline(_ value: MeasureCm)
+
+    @objc(addIdMeasureCmAirline:)
+    @NSManaged public func addToIdMeasureCmAirline(_ values: NSSet)
+
+    @objc(removeIdMeasureCmAirline:)
+    @NSManaged public func removeFromIdMeasureCmAirline(_ values: NSSet)
 
 }
