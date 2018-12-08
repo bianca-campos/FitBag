@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA0A6FC021B4CAEC0003B23D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0A6FBF21B4CAEC0003B23D /* libsqlite3.tbd */; };
-		FA0A6FE521B4CDDE0003B23D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6FDA21B4CDDE0003B23D /* FMDatabaseQueue.m */; };
-		FA0A6FE621B4CDDE0003B23D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6FDD21B4CDDE0003B23D /* FMDatabaseAdditions.m */; };
-		FA0A6FE721B4CDDE0003B23D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6FDE21B4CDDE0003B23D /* FMDatabase.m */; };
-		FA0A6FE821B4CDDE0003B23D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6FE221B4CDDE0003B23D /* FMDatabasePool.m */; };
-		FA0A6FE921B4CDDE0003B23D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6FE321B4CDDE0003B23D /* FMResultSet.m */; };
-		FA0A6FEC21B4DA960003B23D /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A6FEB21B4DA960003B23D /* DBManager.swift */; };
+		FA38858E21B614C8001877D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38858D21B614C8001877D1 /* TableViewController.swift */; };
+		FA38859021BAECF3001877D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38858F21BAECF3001877D1 /* HomeViewController.swift */; };
+		FA38859221BB200C001877D1 /* AirlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859121BB200C001877D1 /* AirlinesTableViewCell.swift */; };
+		FA38859421BB2254001877D1 /* TypeBaggageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859321BB2254001877D1 /* TypeBaggageViewController.swift */; };
+		FA38859821BB2B4D001877D1 /* PersonalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859721BB2B4D001877D1 /* PersonalDetailViewController.swift */; };
+		FA38859A21BB4CEB001877D1 /* CarryOnDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859921BB4CEB001877D1 /* CarryOnDetailViewController.swift */; };
+		FA38859C21BB4CFD001877D1 /* LuggageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859B21BB4CFD001877D1 /* LuggageDetailViewController.swift */; };
 		FA58950821A7790500104A03 /* CustomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA58950721A7790500104A03 /* CustomNavController.swift */; };
 		FADDF1A6218240BE00F86A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDF1A5218240BE00F86A36 /* AppDelegate.swift */; };
 		FADDF1A8218240BE00F86A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDF1A7218240BE00F86A36 /* ViewController.swift */; };
@@ -34,22 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA0A6FBD21AF24CC0003B23D /* fitBag.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = fitBag.db; sourceTree = "<group>"; };
-		FA0A6FBF21B4CAEC0003B23D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		FA0A6FC121B4CB490003B23D /* FitBag-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitBag-Bridging-Header.h"; sourceTree = "<group>"; };
-		FA0A6FD921B4CDDE0003B23D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		FA0A6FDA21B4CDDE0003B23D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		FA0A6FDB21B4CDDE0003B23D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		FA0A6FDC21B4CDDE0003B23D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		FA0A6FDD21B4CDDE0003B23D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		FA0A6FDE21B4CDDE0003B23D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		FA0A6FDF21B4CDDE0003B23D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		FA0A6FE021B4CDDE0003B23D /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
-		FA0A6FE121B4CDDE0003B23D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		FA0A6FE221B4CDDE0003B23D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		FA0A6FE321B4CDDE0003B23D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		FA0A6FE421B4CDDE0003B23D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA0A6FEB21B4DA960003B23D /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		FA38858D21B614C8001877D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		FA38858F21BAECF3001877D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA38859121BB200C001877D1 /* AirlinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesTableViewCell.swift; sourceTree = "<group>"; };
+		FA38859321BB2254001877D1 /* TypeBaggageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBaggageViewController.swift; sourceTree = "<group>"; };
+		FA38859721BB2B4D001877D1 /* PersonalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailViewController.swift; sourceTree = "<group>"; };
+		FA38859921BB4CEB001877D1 /* CarryOnDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarryOnDetailViewController.swift; sourceTree = "<group>"; };
+		FA38859B21BB4CFD001877D1 /* LuggageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuggageDetailViewController.swift; sourceTree = "<group>"; };
 		FA58950721A7790500104A03 /* CustomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavController.swift; sourceTree = "<group>"; };
 		FADDF1A2218240BE00F86A36 /* FitBag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADDF1A5218240BE00F86A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0A6FC021B4CAEC0003B23D /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,35 +75,13 @@
 		FA0A6FBE21B4CAEB0003B23D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA0A6FBF21B4CAEC0003B23D /* libsqlite3.tbd */,
-				FA0A6FC121B4CB490003B23D /* FitBag-Bridging-Header.h */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA0A6FD821B4CDDE0003B23D /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				FA0A6FD921B4CDDE0003B23D /* FMDatabase.h */,
-				FA0A6FDA21B4CDDE0003B23D /* FMDatabaseQueue.m */,
-				FA0A6FDB21B4CDDE0003B23D /* FMResultSet.h */,
-				FA0A6FDC21B4CDDE0003B23D /* FMDatabasePool.h */,
-				FA0A6FDD21B4CDDE0003B23D /* FMDatabaseAdditions.m */,
-				FA0A6FDE21B4CDDE0003B23D /* FMDatabase.m */,
-				FA0A6FDF21B4CDDE0003B23D /* FMDatabaseQueue.h */,
-				FA0A6FE021B4CDDE0003B23D /* FMDB.h */,
-				FA0A6FE121B4CDDE0003B23D /* FMDatabaseAdditions.h */,
-				FA0A6FE221B4CDDE0003B23D /* FMDatabasePool.m */,
-				FA0A6FE321B4CDDE0003B23D /* FMResultSet.m */,
-				FA0A6FE421B4CDDE0003B23D /* Info.plist */,
-			);
-			path = fmdb;
 			sourceTree = "<group>";
 		};
 		FADDF199218240BE00F86A36 = {
 			isa = PBXGroup;
 			children = (
-				FA0A6FBD21AF24CC0003B23D /* fitBag.db */,
 				FADDF1A4218240BE00F86A36 /* FitBag */,
 				FADDF1B9218240C200F86A36 /* FitBagTests */,
 				FADDF1A3218240BE00F86A36 /* Products */,
@@ -133,12 +101,17 @@
 		FADDF1A4218240BE00F86A36 /* FitBag */ = {
 			isa = PBXGroup;
 			children = (
-				FA0A6FD821B4CDDE0003B23D /* fmdb */,
 				FAF5D3942194BA3000E4FE33 /* Supporting Files */,
+				FA38858F21BAECF3001877D1 /* HomeViewController.swift */,
 				FADDF1A7218240BE00F86A36 /* ViewController.swift */,
-				FA0A6FEB21B4DA960003B23D /* DBManager.swift */,
-				FADDF1A9218240BE00F86A36 /* Main.storyboard */,
+				FA38859121BB200C001877D1 /* AirlinesTableViewCell.swift */,
+				FA38859321BB2254001877D1 /* TypeBaggageViewController.swift */,
+				FA38859721BB2B4D001877D1 /* PersonalDetailViewController.swift */,
+				FA38859921BB4CEB001877D1 /* CarryOnDetailViewController.swift */,
+				FA38859B21BB4CFD001877D1 /* LuggageDetailViewController.swift */,
+				FA38858D21B614C8001877D1 /* TableViewController.swift */,
 				FA58950721A7790500104A03 /* CustomNavController.swift */,
+				FADDF1A9218240BE00F86A36 /* Main.storyboard */,
 				FADDF1B1218240C200F86A36 /* Info.plist */,
 			);
 			path = FitBag;
@@ -265,15 +238,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA0A6FE721B4CDDE0003B23D /* FMDatabase.m in Sources */,
 				FADDF1A8218240BE00F86A36 /* ViewController.swift in Sources */,
-				FA0A6FE521B4CDDE0003B23D /* FMDatabaseQueue.m in Sources */,
-				FA0A6FE621B4CDDE0003B23D /* FMDatabaseAdditions.m in Sources */,
+				FA38858E21B614C8001877D1 /* TableViewController.swift in Sources */,
 				FA58950821A7790500104A03 /* CustomNavController.swift in Sources */,
-				FA0A6FEC21B4DA960003B23D /* DBManager.swift in Sources */,
-				FA0A6FE921B4CDDE0003B23D /* FMResultSet.m in Sources */,
-				FA0A6FE821B4CDDE0003B23D /* FMDatabasePool.m in Sources */,
+				FA38859021BAECF3001877D1 /* HomeViewController.swift in Sources */,
+				FA38859221BB200C001877D1 /* AirlinesTableViewCell.swift in Sources */,
+				FA38859821BB2B4D001877D1 /* PersonalDetailViewController.swift in Sources */,
+				FA38859A21BB4CEB001877D1 /* CarryOnDetailViewController.swift in Sources */,
 				FADDF1A6218240BE00F86A36 /* AppDelegate.swift in Sources */,
+				FA38859C21BB4CFD001877D1 /* LuggageDetailViewController.swift in Sources */,
+				FA38859421BB2254001877D1 /* TypeBaggageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
