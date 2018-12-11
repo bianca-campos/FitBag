@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA38858E21B614C8001877D1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38858D21B614C8001877D1 /* TableViewController.swift */; };
 		FA38859021BAECF3001877D1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38858F21BAECF3001877D1 /* HomeViewController.swift */; };
 		FA38859221BB200C001877D1 /* AirlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859121BB200C001877D1 /* AirlinesTableViewCell.swift */; };
 		FA38859421BB2254001877D1 /* TypeBaggageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38859321BB2254001877D1 /* TypeBaggageViewController.swift */; };
@@ -21,6 +20,7 @@
 		FADDF1AD218240C200F86A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADDF1AC218240C200F86A36 /* Assets.xcassets */; };
 		FADDF1B0218240C200F86A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADDF1AE218240C200F86A36 /* LaunchScreen.storyboard */; };
 		FADDF1BB218240C200F86A36 /* FitBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDF1BA218240C200F86A36 /* FitBagTests.swift */; };
+		FAF32A7A21C05CFD0037A4DC /* Airlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32A7921C05CFD0037A4DC /* Airlines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA38858D21B614C8001877D1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		FA38858F21BAECF3001877D1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA38859121BB200C001877D1 /* AirlinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesTableViewCell.swift; sourceTree = "<group>"; };
 		FA38859321BB2254001877D1 /* TypeBaggageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeBaggageViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +51,7 @@
 		FADDF1B6218240C200F86A36 /* FitBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADDF1BA218240C200F86A36 /* FitBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitBagTests.swift; sourceTree = "<group>"; };
 		FADDF1BC218240C200F86A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF32A7921C05CFD0037A4DC /* Airlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airlines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +104,12 @@
 				FAF5D3942194BA3000E4FE33 /* Supporting Files */,
 				FA38858F21BAECF3001877D1 /* HomeViewController.swift */,
 				FADDF1A7218240BE00F86A36 /* ViewController.swift */,
+				FAF32A7921C05CFD0037A4DC /* Airlines.swift */,
 				FA38859121BB200C001877D1 /* AirlinesTableViewCell.swift */,
 				FA38859321BB2254001877D1 /* TypeBaggageViewController.swift */,
 				FA38859721BB2B4D001877D1 /* PersonalDetailViewController.swift */,
 				FA38859921BB4CEB001877D1 /* CarryOnDetailViewController.swift */,
 				FA38859B21BB4CFD001877D1 /* LuggageDetailViewController.swift */,
-				FA38858D21B614C8001877D1 /* TableViewController.swift */,
 				FA58950721A7790500104A03 /* CustomNavController.swift */,
 				FADDF1A9218240BE00F86A36 /* Main.storyboard */,
 				FADDF1B1218240C200F86A36 /* Info.plist */,
@@ -239,8 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADDF1A8218240BE00F86A36 /* ViewController.swift in Sources */,
-				FA38858E21B614C8001877D1 /* TableViewController.swift in Sources */,
 				FA58950821A7790500104A03 /* CustomNavController.swift in Sources */,
+				FAF32A7A21C05CFD0037A4DC /* Airlines.swift in Sources */,
 				FA38859021BAECF3001877D1 /* HomeViewController.swift in Sources */,
 				FA38859221BB200C001877D1 /* AirlinesTableViewCell.swift in Sources */,
 				FA38859821BB2B4D001877D1 /* PersonalDetailViewController.swift in Sources */,

@@ -11,6 +11,7 @@ import UIKit
 class LuggageDetailViewController: UIViewController {
     var luggageInString: String!
     var luggageCmString: String!
+    var nameImageStr: String!
     @IBOutlet weak var airlineImg: UIImageView!
     
     @IBOutlet weak var luggageInches: UILabel!{
@@ -27,6 +28,7 @@ class LuggageDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        airlineImg.image = UIImage(named: nameImageStr)
     }
 }
 

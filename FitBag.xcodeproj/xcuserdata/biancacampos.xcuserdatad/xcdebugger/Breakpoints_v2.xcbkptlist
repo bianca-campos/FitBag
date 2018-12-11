@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FitBag/PersonalDetailViewController.swift"
-            timestampString = "565932464.014581"
+            timestampString = "566259977.773808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "personalInches"
             landmarkType = "24">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FitBag/PersonalDetailViewController.swift"
-            timestampString = "565932464.014742"
+            timestampString = "566259977.773994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "personalInches"
             landmarkType = "24">
             <Locations>
@@ -42,12 +42,12 @@
                   moduleName = "FitBag"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/biancacampos/developer/FitBag/FitBag/PersonalDetailViewController.swift"
-                  timestampString = "565922765.929055"
+                  timestampString = "566247802.510836"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "365">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "456">
                </Location>
                <Location
                   shouldBeEnabled = "No"
@@ -57,12 +57,12 @@
                   moduleName = "FitBag"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/biancacampos/developer/FitBag/FitBag/PersonalDetailViewController.swift"
-                  timestampString = "565922765.932268"
+                  timestampString = "566247802.51579"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "328">
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "418">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FitBag/PersonalDetailViewController.swift"
-            timestampString = "565932464.014811"
+            timestampString = "566259977.774092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "personalInches"
             landmarkType = "24">
          </BreakpointContent>

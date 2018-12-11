@@ -11,7 +11,9 @@ import UIKit
 class CarryOnDetailViewController: UIViewController {
     var carryonInString: String!
     var carryonCmString: String!
+    var nameImageStr: String!
     @IBOutlet weak var airlineImg: UIImageView!
+
     
     @IBOutlet weak var CarryOnInches: UILabel!{
         didSet{
@@ -28,5 +30,6 @@ class CarryOnDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        airlineImg.image = UIImage(named: nameImageStr)
     }
 }

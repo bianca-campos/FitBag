@@ -11,8 +11,11 @@ import UIKit
 class PersonalDetailViewController: UIViewController {
     var personalInString: String!
     var personalCmString: String!
-    
+    var nameImageStr: String!
     @IBOutlet weak var airlineImg: UIImageView!
+    var yellow = UIColor(red: 255.0, green: 228.0, blue: 0.0, alpha: 1.0)
+    
+    
     @IBOutlet weak var personalInches: UILabel!{
         didSet{
             personalInches.text = personalInString
@@ -27,5 +30,14 @@ class PersonalDetailViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO - Border of image
+        airlineImg.image = UIImage(named: nameImageStr)
+//        airlineImg.layer.masksToBounds = true
+        airlineImg.layer.borderWidth = 5
+        airlineImg.layer.borderColor = yellow.cgColor
+        
     }
+    
+    
+    
 }

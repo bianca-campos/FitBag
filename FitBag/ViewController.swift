@@ -12,11 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var airlinesTableView: UITableView!
     
+    var airlines2: [Airlines] = []
+    
     static var airlines = ["Air Canada", "WestJet", "Air Transat", "American Airlines", "Delta Air Lines", "United Airlines", "Hawaiian Airlines", "Azul Linhas Aéreas", "Gol Linhas Aéreas", "LATAM Airlines", "Emirates", "Etihad Airways", "Alitalia", "Japan Airlines", "All Nippon Airways", "Lufthansa"]
     
     static var images = ["airCanada", "westjet", "AirTransat", "aa", "delta", "united", "ha", "airCanada", "airCanada", "airCanada", "airCanada", "airCanada", "airCanada", "airCanada", "airCanada", "airCanada", "airCanada"]
     
-    static var measurePersonalIn = ["17 x 13 x 6", //Air Canada
+    static var measurePersonalIn = ["17 x 13x 6", //Air Canada
                                     "16 x 13 x 6", //WestJet
                                     "No info", //Air Transat
                                     "18 x 14 x 8", //American Airlines
@@ -128,45 +130,77 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         airlinesTableView.dataSource = self
+        airlines2 = createAirlinesArray()
         
     }
     
+
+    
+    func createAirlinesArray() -> [Airlines]{
+        var tempAirlinesArray: [Airlines] = []
+        
+        let airline1 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Air Canada")
+        let airline2 = Airlines(imageAirline: #imageLiteral(resourceName: "westjet"), nameAirline: "WestJet")
+        let airline3 = Airlines(imageAirline: #imageLiteral(resourceName: "AirTransat"), nameAirline: "Air Transat")
+        let airline4 = Airlines(imageAirline: #imageLiteral(resourceName: "aa"), nameAirline: "American Airlines")
+        let airline5 = Airlines(imageAirline: #imageLiteral(resourceName: "delta"), nameAirline: "Delta Air Lines")
+        let airline6 = Airlines(imageAirline: #imageLiteral(resourceName: "united"), nameAirline: "United Airlines")
+        let airline7 = Airlines(imageAirline: #imageLiteral(resourceName: "ha"), nameAirline: "Hawaiian Airlines")
+        let airline8 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Azul Linhas Aéreas")
+        let airline9 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Gol Linhas Aéreas")
+        let airline10 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "LATAM Airlines")
+        let airline11 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Emirates")
+        let airline12 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Etihad Airways")
+        let airline13 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Alitalia")
+        let airline14 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Japan Airlines")
+        let airline15 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "All Nippon Airways")
+        let airline16 = Airlines(imageAirline: #imageLiteral(resourceName: "airCanada"), nameAirline: "Lufthansa")
+        
+        tempAirlinesArray.append(airline1)
+        tempAirlinesArray.append(airline2)
+        tempAirlinesArray.append(airline3)
+        tempAirlinesArray.append(airline4)
+        tempAirlinesArray.append(airline5)
+        tempAirlinesArray.append(airline6)
+        tempAirlinesArray.append(airline7)
+        tempAirlinesArray.append(airline8)
+        tempAirlinesArray.append(airline9)
+        tempAirlinesArray.append(airline10)
+        tempAirlinesArray.append(airline11)
+        tempAirlinesArray.append(airline12)
+        tempAirlinesArray.append(airline13)
+        tempAirlinesArray.append(airline14)
+        tempAirlinesArray.append(airline15)
+        tempAirlinesArray.append(airline16)
+        
+        return tempAirlinesArray
+        
+    }
+    
+    @IBAction func unwindToViewController(_ sender: UIStoryboardSegue){}
+    
+//    Baggage
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PersonalDetails", let detailInfoVC =  segue.destination as? PersonalDetailViewController{
+        if segue.identifier == "Baggage", let detailVC =  segue.destination as? TypeBaggageViewController{
             if let cell = sender as? AirlinesTableViewCell, let indexPath = airlinesTableView.indexPath(for: cell){
                 let selectedIndex = indexPath.row
+                let airlineCompany = ViewController.airlines[selectedIndex]
+                let imgAirline = ViewController.images[selectedIndex]
                 let personalIn = ViewController.measurePersonalIn[selectedIndex]
                 let personalCm = ViewController.measurePersonalCm[selectedIndex]
-    
-//                detailInfoVC.imageString = imgAirline
-                detailInfoVC.personalInString = personalIn
-                detailInfoVC.personalCmString = personalCm
-
-            }
-        }
-
-        else if segue.identifier == "CarryOnDetails", let detailInfoVC =  segue.destination as? CarryOnDetailViewController{
-            if let cell = sender as? AirlinesTableViewCell, let indexPath = airlinesTableView.indexPath(for: cell){
-                let selectedIndex = indexPath.row
                 let carryOnIn = ViewController.measureCarryOnIn[selectedIndex]
                 let carryOnCm = ViewController.measureCarryOnCm[selectedIndex]
-
-                //                detailInfoVC.imageString = imgAirline
-                detailInfoVC.carryonInString = carryOnIn
-                detailInfoVC.carryonCmString = carryOnCm
-                
-            }
-        }
-    
-        else if segue.identifier == "LuggageDetails", let detailInfoVC =  segue.destination as? LuggageDetailViewController{
-            if let cell = sender as? AirlinesTableViewCell, let indexPath = airlinesTableView.indexPath(for: cell){
-                let selectedIndex = indexPath.row
                 let luggageIn = ViewController.measureLuggageIn[selectedIndex]
                 let luggageCm = ViewController.measureLuggageCm[selectedIndex]
-                
-                //                detailInfoVC.imageString = imgAirline
-                detailInfoVC.luggageInString = luggageIn
-                detailInfoVC.luggageCmString = luggageCm
+    
+                detailVC.airlineStr = airlineCompany
+                detailVC.imageStr = imgAirline
+                detailVC.personalInStr = personalIn
+                detailVC.personalCmStr = personalCm
+                detailVC.carryonInStr = carryOnIn
+                detailVC.carryonCmStr = carryOnCm
+                detailVC.luggageInStr = luggageIn
+                detailVC.luggageCmStr = luggageCm
                 
             }
         }
@@ -187,8 +221,11 @@ extension ViewController: UITableViewDataSource {
     // how to display (cell)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AirlinesTableViewCell
+        let airlineImg = airlines2[indexPath.row]
         
-        cell.airlineName.text = ViewController.airlines[indexPath.row]
+        cell.setAirlines(airlines: airlineImg)
+//        cell.airlineName.text = ViewController.airlines[indexPath.row]
+//        cell.nameImageStr = ViewController.airlines[indexPath.row]
         
         return cell
     }
