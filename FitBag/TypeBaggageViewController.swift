@@ -21,10 +21,13 @@ class TypeBaggageViewController: UIViewController {
     var carryonCmStr: String!
     var luggageInStr : String!
     var luggageCmStr : String!
+    var yellow = UIColor(red: 255.0/255.0, green: 228.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         airlineImage.image = UIImage(named: imageStr)
+        airlineImage.layer.borderWidth = 7
+        airlineImage.layer.borderColor = yellow.cgColor
     }
 
 

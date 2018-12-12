@@ -13,7 +13,7 @@ class PersonalDetailViewController: UIViewController {
     var personalCmString: String!
     var nameImageStr: String!
     @IBOutlet weak var airlineImg: UIImageView!
-    var yellow = UIColor(red: 255.0, green: 228.0, blue: 0.0, alpha: 1.0)
+    var yellow = UIColor(red: 255.0/255.0, green: 228.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     
     
     @IBOutlet weak var personalInches: UILabel!{
@@ -33,7 +33,7 @@ class PersonalDetailViewController: UIViewController {
         // TODO - Border of image
         airlineImg.image = UIImage(named: nameImageStr)
 //        airlineImg.layer.masksToBounds = true
-        airlineImg.layer.borderWidth = 5
+        airlineImg.layer.borderWidth = 7
         airlineImg.layer.borderColor = yellow.cgColor
         
     }

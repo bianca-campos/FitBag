@@ -13,6 +13,7 @@ class LuggageDetailViewController: UIViewController {
     var luggageCmString: String!
     var nameImageStr: String!
     @IBOutlet weak var airlineImg: UIImageView!
+    var yellow = UIColor(red: 255.0/255.0, green: 228.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     
     @IBOutlet weak var luggageInches: UILabel!{
         didSet{
@@ -29,6 +30,8 @@ class LuggageDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         airlineImg.image = UIImage(named: nameImageStr)
+        airlineImg.layer.borderWidth = 7
+        airlineImg.layer.borderColor = yellow.cgColor
     }
 }
 
