@@ -21,6 +21,10 @@ class TypeBaggageViewController: UIViewController {
     var carryonCmStr: String!
     var luggageInStr : String!
     var luggageCmStr : String!
+    var website : String!
+    
+    var airlinesInfo: [Airlines] = []
+    
     var yellow = UIColor(red: 255.0/255.0, green: 228.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
@@ -33,22 +37,26 @@ class TypeBaggageViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "PersonalDetails", let detailInfoVC =  segue.destination as? PersonalDetailViewController{
-            detailInfoVC.nameImageStr = imageStr
+            detailInfoVC.nameImageString = imageStr
             detailInfoVC.personalInString = personalInStr
             detailInfoVC.personalCmString = personalCmStr
-
+            detailInfoVC.website = website
+            detailInfoVC.airlineString = airlineStr
         }
     else if segue.identifier == "CarryOnDetails", let detailInfoVC =  segue.destination as? CarryOnDetailViewController{
-            detailInfoVC.nameImageStr = imageStr
+            detailInfoVC.nameImageString = imageStr
             detailInfoVC.carryonInString = carryonInStr
             detailInfoVC.carryonCmString = carryonCmStr
+            detailInfoVC.website = website
+            detailInfoVC.airlineString = airlineStr
         }
 
     else if segue.identifier == "LuggageDetails", let detailInfoVC =  segue.destination as? LuggageDetailViewController{
-            detailInfoVC.nameImageStr = imageStr
+            detailInfoVC.nameImageString = imageStr
             detailInfoVC.luggageInString = luggageInStr
             detailInfoVC.luggageCmString = luggageCmStr
-
+            detailInfoVC.website = website
+            detailInfoVC.airlineString = airlineStr
         }
     }
 
