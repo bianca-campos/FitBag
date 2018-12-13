@@ -20,6 +20,8 @@
 		FADDF1AD218240C200F86A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADDF1AC218240C200F86A36 /* Assets.xcassets */; };
 		FADDF1B0218240C200F86A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADDF1AE218240C200F86A36 /* LaunchScreen.storyboard */; };
 		FADDF1BB218240C200F86A36 /* FitBagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDF1BA218240C200F86A36 /* FitBagTests.swift */; };
+		FAF039A221C21A62001C8342 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF039A121C21A62001C8342 /* Plane.swift */; };
+		FAF039A421C21F4C001C8342 /* MeasureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF039A321C21F4C001C8342 /* MeasureViewController.swift */; };
 		FAF32A7A21C05CFD0037A4DC /* Airlines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF32A7921C05CFD0037A4DC /* Airlines.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		FADDF1B6218240C200F86A36 /* FitBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADDF1BA218240C200F86A36 /* FitBagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitBagTests.swift; sourceTree = "<group>"; };
 		FADDF1BC218240C200F86A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF039A121C21A62001C8342 /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		FAF039A321C21F4C001C8342 /* MeasureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureViewController.swift; sourceTree = "<group>"; };
 		FAF32A7921C05CFD0037A4DC /* Airlines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airlines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,8 @@
 				FA38859921BB4CEB001877D1 /* CarryOnDetailViewController.swift */,
 				FA38859B21BB4CFD001877D1 /* LuggageDetailViewController.swift */,
 				FA58950721A7790500104A03 /* CustomNavController.swift */,
+				FAF039A321C21F4C001C8342 /* MeasureViewController.swift */,
+				FAF039A121C21A62001C8342 /* Plane.swift */,
 				FADDF1A9218240BE00F86A36 /* Main.storyboard */,
 				FADDF1B1218240C200F86A36 /* Info.plist */,
 			);
@@ -241,6 +247,7 @@
 				FADDF1A8218240BE00F86A36 /* ViewController.swift in Sources */,
 				FA58950821A7790500104A03 /* CustomNavController.swift in Sources */,
 				FAF32A7A21C05CFD0037A4DC /* Airlines.swift in Sources */,
+				FAF039A421C21F4C001C8342 /* MeasureViewController.swift in Sources */,
 				FA38859021BAECF3001877D1 /* HomeViewController.swift in Sources */,
 				FA38859221BB200C001877D1 /* AirlinesTableViewCell.swift in Sources */,
 				FA38859821BB2B4D001877D1 /* PersonalDetailViewController.swift in Sources */,
@@ -248,6 +255,7 @@
 				FADDF1A6218240BE00F86A36 /* AppDelegate.swift in Sources */,
 				FA38859C21BB4CFD001877D1 /* LuggageDetailViewController.swift in Sources */,
 				FA38859421BB2254001877D1 /* TypeBaggageViewController.swift in Sources */,
+				FAF039A221C21A62001C8342 /* Plane.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

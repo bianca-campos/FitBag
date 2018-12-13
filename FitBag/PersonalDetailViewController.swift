@@ -40,8 +40,7 @@ class PersonalDetailViewController: UIViewController {
         
     }
     
-    @IBAction func measure(_ sender: Any) {
-    }
+    @IBAction func measure(_ sender: Any) {}
     
     @IBAction func openWeb(_ sender: Any) {
         UIApplication.shared.open(NSURL(string: website)! as URL, options: [:], completionHandler: nil)
