@@ -44,8 +44,14 @@ class CarryOnDetailViewController: UIViewController {
         UIApplication.shared.open(NSURL(string: website)! as URL, options: [:], completionHandler: nil)
     }
     
+    let text = "Hey, check it out this infos: "
+    let airline = "Airline:"
+    let inche = "Measure for carry-on item (inches):"
+    let cm = "Measure for carry-on item (centimeters):"
+    let site = "Website:"
+    let bye = "Thanks for use FitBag and have a safe trip!"
     @IBAction func shareInfos(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: [self.airlineString, self.carryonInString, self.carryonCmString, self.website], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [text, airline, self.airlineString, inche, self.carryonInString, cm, self.carryonCmString, site, self.website, bye], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
     }

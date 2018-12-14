@@ -36,6 +36,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         airlinesTableView.reloadData()
     }
     
+    
     //    Segue to Baggage
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Baggage", let detailVC =  segue.destination as? TypeBaggageViewController{

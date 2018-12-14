@@ -21,10 +21,7 @@ class TypeBaggageViewController: UIViewController {
     var carryonCmStr: String!
     var luggageInStr : String!
     var luggageCmStr : String!
-    var website : String!
-    
-    var airlinesInfo: [Airlines] = []
-    
+    var website : String!    
     var yellow = UIColor(red: 255.0/255.0, green: 228.0/255.0, blue: 0.0/255.0, alpha: 1.0)
     
     override func viewDidLoad() {

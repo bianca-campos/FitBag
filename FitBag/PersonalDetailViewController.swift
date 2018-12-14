@@ -46,8 +46,14 @@ class PersonalDetailViewController: UIViewController {
         UIApplication.shared.open(NSURL(string: website)! as URL, options: [:], completionHandler: nil)
     }
     
+    let text = "Hey, check it out this infos: "
+    let airline = "Airline:"
+    let inche = "Measure for personal item (inches):"
+    let cm = "Measure for personal item (centimeters):"
+    let site = "Website:"
+    let bye = "Thanks for use FitBag and have a safe trip!"
     @IBAction func shareInfos(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: [self.airlineString, self.personalInString, self.personalCmString, self.website], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [text, airline, self.airlineString, inche, self.personalInString, cm, self.personalCmString, site, self.website, bye], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
     }

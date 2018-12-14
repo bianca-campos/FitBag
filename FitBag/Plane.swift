@@ -28,17 +28,12 @@ class Plane: SCNNode {
         // geometry
         self.planeGemoetry = SCNBox(width: width, height: planeHeight, length: length, chamferRadius: 0)
         
-        // meterial : grid image
-        let material = SCNMaterial()
-        let image = UIImage(named: "grid")
-        material.diffuse.contents = image
-        
         // transparent materials
         let transparentMaterial = SCNMaterial()
         transparentMaterial.diffuse.contents = UIColor.white.withAlphaComponent(0.0)
         
         // assign material
-        self.planeGemoetry?.materials = [transparentMaterial, transparentMaterial, transparentMaterial, transparentMaterial, material, transparentMaterial]
+        self.planeGemoetry?.materials = [transparentMaterial, transparentMaterial, transparentMaterial, transparentMaterial, transparentMaterial]
         
         // create plane node
         let planeNode = SCNNode(geometry: self.planeGemoetry)
@@ -73,12 +68,7 @@ class Plane: SCNNode {
     {
         let width = self.planeGemoetry?.width
         let length = self.planeGemoetry?.length
-        
-        // scaling grid texture
-        let material = self.planeGemoetry?.materials[4]
-        material?.diffuse.contentsTransform = SCNMatrix4MakeScale(Float(width!), Float(length!), 1);
-        material?.diffuse.wrapS = .repeat
-        material?.diffuse.wrapT = .repeat
+
     }
     
     required init?(coder aDecoder: NSCoder) {

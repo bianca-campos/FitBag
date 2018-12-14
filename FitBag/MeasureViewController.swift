@@ -16,6 +16,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
     var dictPlanes = [ARPlaneAnchor: Plane]()
     // distance label
     @IBOutlet weak var lblMeasurementDetails: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // setup scene
@@ -26,10 +27,10 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         // set delegate ARSCNViewDelegate
         self.sceneView.delegate = self
         // showing statistics (fps, timing info)
-        self.sceneView.showsStatistics = true
+        self.sceneView.showsStatistics = false
         self.sceneView.autoenablesDefaultLighting = true
         //debug points
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+//        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         //create new scene
         let scene = SCNScene()
         self.sceneView.scene = scene
@@ -38,9 +39,8 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
     
     // start node
     var startNode: SCNNode?
-    
     @IBAction func onAddButtonClick(_ sender: UIButton) {
-        if let position = self.doHitTestOnExistingPlanes() {
+        if let position = self.existingPlanes() {
             // add node at hit-position
             let node = self.nodeWithPosition(position)
             sceneView.scene.rootNode.addChildNode(node)
@@ -49,7 +49,7 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    func doHitTestOnExistingPlanes() -> SCNVector3? {
+    func existingPlanes() -> SCNVector3? {
         // hit-test of view's center with existing-planes
         let results = sceneView.hitTest(view.center, types: .existingPlaneUsingExtent)
         // check if result is available
@@ -117,14 +117,14 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             // get current hit position
             // and check if start-node is available
-            guard let currentPosition = self.doHitTestOnExistingPlanes(),
+            guard let currentPosition = self.existingPlanes(),
                 let start = self.startNode else { return }
             // line-node
             self.line_node?.removeFromParentNode()
             self.line_node = self.getDrawnLineFrom(pos1: currentPosition, toPos2: start.position)
             self.sceneView.scene.rootNode.addChildNode(self.line_node!)
             // distance-string
-            let desc = self.getDistanceStringBeween(pos1: currentPosition,
+            let desc = self.getDistanceString(pos1: currentPosition,
                                                     pos2: start.position)
             DispatchQueue.main.async {
                 self.lblMeasurementDetails.text = desc
@@ -150,37 +150,24 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
     }
     
     //     Distance string
-    func getDistanceStringBeween(pos1: SCNVector3?,
+    func getDistanceString(pos1: SCNVector3?,
                                  pos2: SCNVector3?) -> String {
-        
         if pos1 == nil || pos2 == nil {
             return "0"
         }
         let d = self.distanceBetweenPoints(A: pos1!, B: pos2!)
-        
         var result = ""
         
-        let meter = stringValue(v: Float(d), unit: "meters")
-        result.append(meter)
-        result.append("\n")
-        
-        let f = self.foot_fromMeter(m: Float(d))
-        let feet = stringValue(v: Float(f), unit: "feet")
-        result.append(feet)
-        result.append("\n")
-        
-        let inch = self.Inch_fromMeter(m: Float(d))
-        let inches = stringValue(v: Float(inch), unit: "inch")
-        result.append(inches)
-        result.append("\n")
-        
-        let cm = self.CM_fromMeter(m: Float(d))
-        let cms = stringValue(v: Float(cm), unit: "cm")
+        let cm = self.cmFromMeter(m: Float(d))
+        let cms = stringValue(v: Float(cm), unit: "cm  ")
         result.append(cms)
         
+        let inch = self.inFromMeter(m: Float(d))
+        let inches = stringValue(v: Float(inch), unit: "inch")
+        result.append(inches)
+
         return result
     }
-    
     
     //     Distance between 2 points
     func distanceBetweenPoints(A: SCNVector3, B: SCNVector3) -> CGFloat {
@@ -194,25 +181,19 @@ class MeasureViewController: UIViewController, ARSCNViewDelegate {
     
     //     String with float value and unit
     func stringValue(v: Float, unit: String) -> String {
-        let s = String(format: "%.1f %@", v, unit)
+        let s = String(format: "%.0f %@", v, unit)
         return s
     }
     
     //     Inch from meter
-    func Inch_fromMeter(m: Float) -> Float {
+    func inFromMeter(m: Float) -> Float {
         let v = m * 39.3701
         return v
     }
     
     //     centimeter from meter
-    func CM_fromMeter(m: Float) -> Float {
+    func cmFromMeter(m: Float) -> Float {
         let v = m * 100.0
-        return v
-    }
-    
-    //     feet from meter
-    func foot_fromMeter(m: Float) -> Float {
-        let v = m * 3.28084
         return v
     }
     
